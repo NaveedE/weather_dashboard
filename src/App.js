@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import WeatherSearch from './components/WeatherSearch';
+import Dashboard from './components/Dashboard';
+import './styles.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [cities, setCities] = useState([]);
+
+    const addCity = (city) => {
+        setCities([...cities, city]);
+    };
+
+    const removeCity = (index) => {
+        const newCities = [...cities];
+        newCities.splice(index, 1);
+        setCities(newCities);
+    };
+
+    return (
+        <div className="container">
+            <WeatherSearch onAddCity={addCity} />
+            <Dashboard cities={cities} onRemoveCity={removeCity} />
+        </div>
+    );
+};
 
 export default App;
