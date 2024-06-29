@@ -9,7 +9,17 @@ body {
 }
 
 h5 {
-  color: white;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  
+}
+h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 input {
@@ -30,6 +40,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 button:hover {
@@ -41,14 +52,15 @@ button:hover {
   font-weight: bold;
   margin-right: 10px;
   font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .city-temp {
-  font-size: 16px;
+  font-size: 18px;
   margin-right: 10px;
 }
 
 .city-description {
-  font-size: 16px;
+  font-size: 18px;
   color: black(12, 12, 12);
 }
 .container {
@@ -66,7 +78,10 @@ ul {
 }
 
 li {
-  background: white;
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
@@ -76,7 +91,10 @@ li {
 }
 
 li:nth-child(even) {
-  background: #dee2e6;
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 li button {

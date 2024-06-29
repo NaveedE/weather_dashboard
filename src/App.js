@@ -19,6 +19,7 @@ const App = () => {
 
     return (
         <div className="container">
+            <h1 className="heading">WEATHER DASHBOARD</h1>
             <WeatherSearch onAddCity={addCity} />
             <Dashboard cities={cities} onRemoveCity={removeCity} />
         </div>
